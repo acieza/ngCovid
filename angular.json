@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngCovid"
+    }
+  },
+  "defaultProject": "ngCovid",
+  "cli": {
+    "analytics": "bde672fd-ede6-47a6-9558-569924a5a7e4"
+  }
 }

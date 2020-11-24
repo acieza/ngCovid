@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+.sideBar{
+    width:  250px;
+    padding: 0.5em;
+    background-color: #333333;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+}
+.menu{
+    padding: 1em;
+    margin-bottom: 0.5em;
+    max-width: 100%;
+    border: 1px solid black;
+}
+.menu:hover, .menuActivo{
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+.centro{
+    width:  calc(100% - 250px);
+    background-color: rgb(250, 248, 135);
+}
