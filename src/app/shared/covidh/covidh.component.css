@@ -1,0 +1,24 @@
+.datos{
+    font-size: 24px;
+}
+.cajon{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1em;
+    grid-row-gap: 1em;
+    grid-column-gap: 1em;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+.caja{
+    border: 1px solid rgb(163, 161, 161);
+    border-radius: 2em;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-style: italic;
+}
