@@ -3,14 +3,14 @@
 <div class="cajon"> 
     <div class="caja">
         <div class="cajita">Recuperados</div>
-        <div class="datos">{{datos.today_new_recovered}}</div>
+        <div class="datos">{{datos.today_new_recovered | number}}</div>
     </div>
     <div class="caja">
         <div class="cajita">Infectados</div>
-        <div class="datos">{{datos.today_new_confirmed}}</div>
+        <div class="datos">{{datos.today_new_confirmed | number}}</div>
     </div>
     <div class="caja">
         <div class="cajita">Muertos</div>
-        <div class="datos">{{datos.today_new_deaths}}</div>
+        <div class="datos">{{datos.today_new_deaths | number}}</div>
     </div>
 </div>

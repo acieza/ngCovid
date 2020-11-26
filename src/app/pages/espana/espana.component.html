@@ -3,4 +3,13 @@
 
 <app-covidh [datos]="Spain"></app-covidh>
 
-
+<div class="grafica">
+    <canvas baseChart
+    [datasets]="barChartData"
+    [labels]="barChartLabels"
+    [options]="barChartOptions"
+    [plugins]="barChartPlugins"
+    [legend]="barChartLegend"
+    [chartType]="barChartType"></canvas>
+ 
+</div>

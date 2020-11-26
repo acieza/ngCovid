@@ -3,3 +3,14 @@
 
 <app-covidh [datos]="Total"></app-covidh>
 <div>--{{Total.date}}</div>
+
+<div class="grafica">
+    <canvas baseChart 
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"
+                [plugins]="lineChartPlugins"></canvas>
+</div>
