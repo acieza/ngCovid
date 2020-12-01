@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, SimpleChange, OnChanges, SimpleChanges } from '@angular/core';
 import { Imundo } from 'src/app/core/servicio/interfaces/Imundo';
 
 @Component({
@@ -6,12 +6,21 @@ import { Imundo } from 'src/app/core/servicio/interfaces/Imundo';
   templateUrl: './covidh.component.html',
   styleUrls: ['./covidh.component.css']
 })
-export class CovidhComponent implements OnInit {
+export class CovidhComponent implements OnChanges {
+  //datos: Imundo;
+  bandera = false;
 
   @Input() datos: Imundo;
   constructor() { }
 
-  ngOnInit(): void {
+  
+
+  ngOnChanges(changes: SimpleChanges){
+    const cambiodatos: SimpleChange = changes.datos;
+
+    if(cambiodatos.currentValue){
+      this.bandera=true;
+    }
   }
 
 }

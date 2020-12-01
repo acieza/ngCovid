@@ -23,32 +23,43 @@ export class EspanaComponent implements OnInit {
 
 
   Spain:Imundo
+  entreFechas: Imundo[];
 
   ngOnInit(): void {
     this.devuelveSpain();
+    //this.devuelveFecha();
   }
 
 
   devuelveSpain(){
-    this.covidService.getAllMundo(this.fecha)
+    this.covidService.getAllMundo(this.fecha,'Spain')
     .subscribe(datosmundo =>{
       this.Spain = datosmundo.dates[this.fecha].countries.Spain;
     })
   }
 
+  devuelveFecha(fechas:any){
+    this.covidService.getAllFechas(fechas.fechaAnterior,fechas.fechaPosterior, 'Spain')
+    .subscribe(datosmundo =>{
+     let listado = datosmundo.dates;
+
+      console.log(listado);
+    })
+  }
+
   //GRAFICAS//
   barChartData: ChartDataSets[]=[
-    {data: [100,62,64,70,85,72,25], 
+    {data: [100,62,64,70,85,72,25,56,43,87,11], 
      label: 'Numero de Recuperados'},
-     {data: [65,72,42,50,52,96,55], 
+     {data: [65,72,42,50,52,96,55,45,67,34,23], 
       label: 'Numero de Muertos'},
-      {data: [42,62,62,70,22,76,35], 
+      {data: [42,62,62,70,22,76,35,34,67,45,86], 
         label: 'Numero de infectados'}
     
 
   ];
 
-  barChartLabels: Label[]=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio'];
+  barChartLabels: Label[]=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre'];
 
   barChartOptions ={
     responsive:true

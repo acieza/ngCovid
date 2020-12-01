@@ -1,3 +1,5 @@
 <div class="filtro">
-    Esto es mi FiltroComponent
+   <input type="date" [(ngModel)]="fecha2">
+   <input type="date" [(ngModel)]="fecha">
+   <div class="boton" (click)="mandarFecha(fecha2, fecha)">Buscar entre fechas</div>
 </div>

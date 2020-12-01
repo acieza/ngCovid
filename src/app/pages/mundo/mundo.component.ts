@@ -1,3 +1,4 @@
+import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ChartDataSets } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
@@ -11,16 +12,20 @@ import { Imundo } from 'src/app/core/servicio/interfaces/Imundo';
 })
 export class MundoComponent implements OnInit {
 
-  constructor(private covidService: CovidService) { }
+  constructor(private covidService: CovidService) { 
+    this.fecha= formatDate(this.Nfecha,'yyyy-MM-dd','en-US');
+  }
 
   ngOnInit(): void {
     this.devuelveMundo();
   }
 
   Total:Imundo;
+  Nfecha=Date();
+  fecha: string;
 
   devuelveMundo(){
-    this.covidService.getAllMundo()
+    this.covidService.getAllMundo(this.fecha,'Spain')
     .subscribe(datosmundo =>{
       this.Total = datosmundo.total;
     })

@@ -1,7 +1,8 @@
-<!--<app-filtro></app-filtro>-->
-<div>--{{Spain.date}}</div>
+<app-filtro (fechas)=devuelveFecha($event)></app-filtro>
 
+<div class="Centrar"><p>{{fecha}}</p></div>
 <app-covidh [datos]="Spain"></app-covidh>
+
 
 <div class="grafica">
     <canvas baseChart

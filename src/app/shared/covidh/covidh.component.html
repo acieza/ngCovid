@@ -2,15 +2,24 @@
 <div class="titulo">Datos ultimas 24H</div>
 <div class="cajon"> 
     <div class="caja">
+        <img src="../../../assets/gif/gif3.gif" alt="" class="loading" *ngIf="bandera==false; else elseBlock">
+        <ng-template #elseBlock>
         <div class="cajita">Recuperados</div>
         <div class="datos">{{datos.today_new_recovered | number}}</div>
+        </ng-template>
     </div>
     <div class="caja">
+        <img src="../../../assets/gif/gif3.gif" alt="" class="loading" *ngIf="bandera==false; else elseBlock2">
+        <ng-template #elseBlock2>
         <div class="cajita">Infectados</div>
         <div class="datos">{{datos.today_new_confirmed | number}}</div>
+         </ng-template>
     </div>
     <div class="caja">
+        <img src="../../../assets/gif/gif3.gif" alt="" class="loading" *ngIf="bandera==false; else elseBlock3">
+        <ng-template #elseBlock3>
         <div class="cajita">Muertos</div>
         <div class="datos">{{datos.today_new_deaths | number}}</div>
+        </ng-template>
     </div>
 </div>

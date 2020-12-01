@@ -1,3 +1,17 @@
 .grafica{
     width: 75%;
 }
+.Centrar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5em;
+    font-size: 20px;
+    font-style: italic;
+    
+}
+.Centrar p{
+    border-bottom: 1px solid #333333;
+    margin-bottom: 0.5em;
+}

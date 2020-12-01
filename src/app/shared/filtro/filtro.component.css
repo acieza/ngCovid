@@ -1,8 +1,17 @@
 .filtro{
     background-color: white;
     height: 50px;
-    width: 100%;
+    width: calc(100%-20px);
     display: flex;
     align-items: center;
     padding-left: 20px;
+}
+input{
+    margin-right: 20px;
+}
+.boton{
+    padding: 0.5em 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
 }
